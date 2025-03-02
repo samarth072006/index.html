@@ -1,0 +1,122 @@
+<!--
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 20px;
+            background-color: antiquewhite;
+        }
+
+        #contact-container {
+            width: 400px;
+            margin: 0 auto;
+        }
+
+        #contact-container>h2:hover {
+            font-size: 1.3rem;
+            color: rgb(218, 114, 114);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #30a534;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+        }
+        p > li{
+        list-style-type: square;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="contact-container">
+        <h2>Contact Us :</h2>
+        <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Send</button>
+        </form>
+        <br><br>
+        <p><li>Let's build something amazing together.</li></p>
+    </div>
+
+</body>
+
+</html>
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="E:\my project portfolio1\contactstyles.css">
+</head>
+<body>
+    <main>
+        <article id="contact">
+            <section class="contact-form">
+                <h2><b>Don't miss a chance</b></h2>
+                <h2>Get in Touch</h2>
+                <form id="contact-form" action="mailto:your-email@example.com" method="post" enctype="text/plain">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+
+                    <button type="submit">Send Message</button>
+                    <p id="form-message"></p>
+                </form>
+            </section>
+            <section class="contact-info">
+                <h2>Contact Information</h2>
+                <ul>
+                    <li>Email: <a href="https://mail.google.com/mail/u/0/#inbox">samarthmashaar07@gmail.com</a></li>
+                    <li>Phone: +919699007918</li>
+                    <li>Facebook: <a href="https://www.facebook.com/profile.php?id=100069211045250">My Facebook Profile</a></li>
+                    <li>Github: <a href="https://github.com/samarth072006">My Github Profile</a></li>
+                </ul>
+            </section>
+            <section class="call-to-action">
+                <p>Let's build something amazing together.</p>
+                <p><b>"Your vision, our expertise. Together, we'll create something remarkable."</b></p>
+            </section>
+        </article>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
