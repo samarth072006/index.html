@@ -2626,6 +2626,37 @@
             width: 100%;
         }
 
+        .navbar {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            /* Optional: Add background color */
+        }
+
+        .navbar li {
+            float: left;
+        }
+
+        .navbar li a {
+            display: block;
+            color: rgb(255, 255, 255);
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .navbar li a:hover {
+            background-color: #111;
+        }
+
+        .left {
+            float: left;
+            padding: 14px 16px;
+            color: rgb(248, 248, 248);
+        }
+
+        /* Mobile Slide Bar */
         .sidebar {
             height: 100%;
             width: 0;
@@ -2674,6 +2705,7 @@
         }
 
         #main {
+            transition: margin-left .5s;
             padding: 16px;
         }
 
@@ -2702,6 +2734,7 @@
 
             .right ul {
                 display: none;
+                list-style-type: none;
                 /* Hide nav links on smaller screens */
             }
 
@@ -2749,20 +2782,23 @@
 
         @media screen and (max-width: 600px) {
 
-            /* Ensure the right div is aligned to the right */
-            nav .right {
-                /* Corrected selector */
-                width: 100%;
-                /* Ensure it takes full width */
-                display: flex;
-                justify-content: flex-end;
-                /* Button on the right */
+            .navbar {
+                display: none;
+                /* Hide desktop nav on small screens */
             }
 
-            /* Optional: Adjust button styles for responsive */
+            #main {
+                margin-left: 0;
+            }
+        }
+
+        @media screen and (min-width: 601px) {
             .openbtn {
-                font-size: 18px;
-                padding: 0px 12px;
+                display: none;
+            }
+
+            .sidebar {
+                display: none;
             }
         }
     </style>
@@ -2771,28 +2807,29 @@
     <header>
         <nav>
             <div class="left">My Portfolio</div>
-            <div class="right">
-
-                <!--
-                    <li><a href="file:///E:/my%20project%20portfolio1/My%20portfoliuo%20project%201.html">Home</a></li>
-                    <li><a href="E:\my project portfolio1\My About.html">About</a></li>
-                    <li><a href=file:///E:/my%20project%20portfolio1/My%20Services.html>Services</a></li>
-                    <li><a href=file:///E:/my%20project%20portfolio1/My%20Project.html>Projects</a></li>
-                    <li><a href=file:///E:/my%20project%20portfolio1/My%20Contact.html>Contacts</a></li>
-            </ul>-->
-                <button class="openbtn" onclick="openNav()">☰</button>
+            <div class="navbar">
+                <li><a href="https://samarth072006.github.io/index.html">Home</a></li>
+                <li><a href="My About.html">About</a></li>
+                <li><a href="My Services.html">Services</a></li>
+                <li><a href="My Project.html">Projects</a></li>
+                <li><a href="My Contact.html">Contacts</a></li>
             </div>
         </nav>
-    </header>
 
-    <div id="mySidebar" class="sidebar">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-        <a href="https://samarth072006.github.io/index.html">Home</a>
-        <a href="My About.html">About</a>
-        <a href="My Services.html">Services</a>
-        <a href="My Project.html">Projects</a>
-        <a href="My Contact.html">Contacts</a>
-    </div>
+        <div id="mySidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+            <a href="https://samarth072006.github.io/index.html">Home</a>
+            <a href="My About.html">About</a>
+            <a href="My Services.html">Services</a>
+            <a href="My Project.html">Projects</a>
+            <a href="My Contact.html">Contacts</a>
+        </div>
+
+        <div id="main">
+            <button class="openbtn" onclick="openNav()">☰</button>
+        </div>
+    
+
     <script>
         function openNav() {
             document.getElementById("mySidebar").style.width = "250px";
@@ -2804,6 +2841,7 @@
             document.getElementById("main").style.marginLeft = "0";
         }
     </script>
+    </header>
     <main>
 
         <section class="first">
